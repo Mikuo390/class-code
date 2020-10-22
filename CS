@@ -1,0 +1,15 @@
+#include<stdio.h>
+#define PAI 3.14159
+float area(int r)
+{
+	return PAI * r * r;
+}
+int main()
+{
+	int r;
+	float l, s;
+	scanf("%d",&r);
+	l = 2 * PAI * r;
+	s = area(r);
+	printf("半径r=%d，周长l=%5.2f，面积s=%5.2f\n", r, l, s);
+}
