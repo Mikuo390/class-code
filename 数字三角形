@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+	int i, j;
+	for (i = 1; i <= 5; i++)
+	{
+		for (j = 0; j <= 10 - 2 * i; j++)
+			printf("");
+		for (j = 0; j <= i; j++)
+			printf("%d", i);
+		printf("\n");
+	}
+	//更简单的方法
+	printf("1\n");
+	printf("1 2\n");
+	printf("1 2 3\n");
+	printf("1 2 3 4\n");
+	printf("1 2 3 4 5\n");
+	return 0;
+}
