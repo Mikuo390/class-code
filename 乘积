@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main()
+{
+	int num1, num2, p;
+	scanf("%d%d", &num1, &num2);
+	p = prodct(num1, num2);
+	printf("The product is %d", p);
+	return 0;
+}
+int prodct(int a, int b)
+{
+	int c;
+	c = a * b;
+	return c;
+}
