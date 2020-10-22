@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a, b, c, g, h, i;
+	printf("三个整数a,b,c\n");
+	scanf("%d%d%d", &a, &b, &c);
+	g = (a < b ? a : b);
+	g = (g < c ? g : c);
+	h = a > b ? a : b;
+	h = h > c ? h : c;
+	i = a + b + c - g - h;
+	if ((i + g > h) && (h - i < g))
+	{
+		printf("这三个数能构成一个三角形，且");
+			if (a == b && b == c)
+			{
+				printf("这是等边三角形\n");
+			}
+			else if(a==b||b==c||c==a)
+				printf("这是等腰三角形\n");
+			else if(h==sqrt(g*g+i*i))
+				printf("这是直角三角形\n");
+			else 
+				printf("这是一般三角形\n");
+	}
+	else
+	{
+		printf("无法构成三角形\n");
+		return 0;
+	}
+}
