@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	printf("ab c\tde\rf\n");
+	printf("hijk\tL\bM\n");
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	printf("%c\n", 'W');
+	printf("%o\n", '\011');
+	printf("%c\n", '\xab');
+	return 0;
+}
