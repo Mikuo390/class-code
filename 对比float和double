@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	float x = 5555.55555;
+	double y = 5555.555555555555;
+	printf("x=%f\n", x);
+	printf("x=%lf\n", y);
+}
