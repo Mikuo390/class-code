@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	char a = 'X', b = 'Y';
+	a += 32;
+	b += 32;
+	printf("%c,%c\n", a, b);
+}
