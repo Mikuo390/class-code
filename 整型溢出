@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main()
+{
+	short a = 32767, b;
+	b = a + 1;
+	printf("a=%d,b=%d\n", a, b);
+}
