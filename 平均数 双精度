@@ -1,0 +1,19 @@
+//平均数
+#include<stdio.h>
+
+double average(double x, double y)
+{
+	double z = 0;
+	z = (x + y) / 2;
+	return z;
+}
+
+int main()
+{
+	double a, b, c;
+	printf("请输入两个数的值;>");
+	scanf("%lf%lf", &a, &b);
+	c = average(a,b);
+	printf("平均数是:>%lf", c);
+	return 0;
+}
