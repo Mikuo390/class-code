@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+	char a = 'X', b = 'Y',c = 'Z';
+	a += 32;
+	b += 32;
+	c += 32;
+	printf("%c,%c,%c\n", a, b, c);
+
+	char d = 'x', e = 'y', f = 'z';
+	d -= 32;
+	e -= 32;
+	f -= 32;
+	printf("%c,%c,%c\n",d, e, f);
+
+	char g = 'A', h = 'A', i = 'A';
+	g -= 32;
+	h -= 33;
+	i -= 34;
+	printf("%c,%c,%c\n", g, h, i);
+}
