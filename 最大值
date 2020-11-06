@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int a, b, max, min;
+	
+	printf("请输入两个数:>");
+	scanf("%d%d", &a, &b);
+	
+	min = a < b ? a : b;
+	max = a > b ? a : b;
+	
+	printf("最大值是%d\n最小值是%d\n", max, min);
+}
