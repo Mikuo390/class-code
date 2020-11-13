@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int main()
+{	
+	int c, d;
+	printf("请输入交换的数c和d:>");
+	scanf("%d%d", &c, &d);
+	c = c ^ d;
+	d = c ^ d;
+	c = c ^ d;
+	printf("交换后的值为:>%d %d\n", c, d);
+
+	return 0;
+}
