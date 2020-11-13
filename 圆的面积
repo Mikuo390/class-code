@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#define PAI 3.1415
+double cal(double x)
+{
+	double z = 0;
+	z = PAI * x * x;
+	return z;
+}
+int main()
+{
+	double r, s;
+	
+	printf("请输入圆的半径为:>");
+	scanf("%lf", &r);
+	s = cal(r);
+	printf("%lf", s);
+	return 0;
+}
