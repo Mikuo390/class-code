@@ -1,0 +1,57 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int main()
+{
+	double a, b, c, d, min;
+	printf("请输入四个数字:>");
+	scanf("%lf%lf%lf%lf", &a, &b, &c, &d);
+	
+	if (a < b)
+	{
+		if (a < c)
+		{
+			if (a < d)
+			{
+				printf("最小值为%lf\n", a);
+			}
+			else
+			{
+				printf("最小值为%lf\n", d);
+			}
+		}
+		else
+		{
+			if (c > d)
+			{
+				printf("最小值为%lf\n", d);
+			}
+			else
+			{
+				printf("最小值为%lf\n", c);
+			}
+		}
+	}
+	else
+	{
+		if (b<c)
+		{
+			if (b < d)
+			{
+				printf("最小值为%lf\n", b);
+			}
+		}
+		else
+		{
+			if (c<d)
+			{
+				printf("最小值为%lf\n", c);
+			}
+			else
+			{
+				printf("最小值为%lf\n", d);
+			}
+		}
+	}
+	return 0;
+}
