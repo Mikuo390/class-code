@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int main()
+{
+	int count = 0;//次数
+    int one = 0;//一分钱
+    int two = 0;//两分钱
+    int five = 0;//五分钱
+    printf("------------------结果------------------\n");
+    for (one = 0; one <= 100; one++)
+    {
+        for (two = 0; two <= 50; two++)
+        {
+            five = (100 - one - 2*two)/5;
+            if (five >= 0 && 5*five+2*two+one == 100)//限制条件
+            {
+                printf("一分钱:%-3d个，两分钱:%-3d个，五分钱:%-3d个\n", one, two, five);
+                count++;
+            }
+        }
+    }
+    printf("------------------总数------------------\n");
+    printf("------------------%-2d------------------\n", count);
+}
