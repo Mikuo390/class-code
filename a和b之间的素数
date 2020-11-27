@@ -1,0 +1,62 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int prime(int n)
+{
+	//2->n-1
+	//判断是否为素数
+	int j = 0;//循环变量
+	for (j = 2; j < n; j++)
+	{
+		//判断是否除尽
+		if (n % j == 0)
+			return 0;//除尽返回0
+	}
+	return 1;//除尽返回1
+}
+int main()
+{
+	//循环变量
+	int i = 0;
+	//范围变量
+	int i1 = 0;
+	int i2 = 0;
+	printf("请输入素数的范围》");
+	scanf("%d%d", &i1, &i2);
+
+	for (i = i1; i <= i2; i++)
+	{
+		//判断素数
+		if (prime(i) == 1)
+			//打印素数
+			printf("%d ", i);
+	}
+	return 0;
+}
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i = 0;
+	int j = 0;
+	int i1 = 0;
+	int i2 = 0;
+	printf("请输入素数的范围》");
+	scanf("%d%d", &i1, &i2);
+	for (i = i1; i <= i2; i++)
+	{
+		for (j = 2; j < sqrt(i); j++)
+		{
+			if (i % j == 0)
+			{
+				break;
+			}
+		}
+		if (j > sqrt(i))
+		{
+			printf("%d ", i);
+		}
+	}
+	return 0;
+}
