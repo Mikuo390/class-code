@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int n = 0;
+	printf("请输入a和n的值:>");
+	scanf("%d%d", &a, &n);
+
+	long long sum = 0;//和
+	int i = 0;//循环变量
+	int ret = 0;//每个数据
+	for (i = 0; i < n; i++)
+	{
+		ret = ret * 10 + a;
+		sum += ret;
+	}
+	printf("%ld\n", sum);
+	return 0;
+}
