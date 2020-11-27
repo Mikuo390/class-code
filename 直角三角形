@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int main()
+{
+	int a, b, c,max,min,i;
+	printf("请输入三角形的三条边:>");
+	scanf("%d%d%d", &a, &b, &c);
+	min = (a < b ? a:b);
+	min = (min < c ? min : c);//最短边
+	max = (a > b ? a : b);
+	max = (max > c ? max : c);//最长边
+
+	i = a + b + c - max - min;
+	if ((i + min > max) && (max - i < min))
+	{
+		if (max = sqrt(min * min + i * i))
+		{
+			printf("能构成一个直角三角形");
+		}
+		else
+		{
+			printf("不能构成一个直角三角形");
+		}
+	}
+	else
+		printf("不能构成三角形");
+	return 0;
+}
