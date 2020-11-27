@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i = 0;
+	for (i = 100; i <= 999; i++)
+	{
+		//计算i的位数
+		int n = 1;
+		int sum = 0;
+		int tmp = i;
+
+		while (tmp /= 10)
+		{
+			n++;
+		}
+		//计算i的每一位的n次方之和
+		tmp = i;
+		while (tmp)
+		{
+			sum += pow(tmp % 10, n);
+			tmp /= 10;
+		}
+		//比较i == sum
+		if (i == sum)
+		{
+			printf("%d ", i);
+		}
+	}
+	return 0;
+}
