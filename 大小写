@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+	char ch;
+	ch = getchar();
+
+	if (ch < 91)
+	{
+		//ch = ch + 32;
+		ch =tolower(ch);
+		//putchar(ch);
+	}
+	else
+	{
+		//ch = ch - 32;
+		ch = toupper(ch);
+		putchar(ch);
+	}
+}
