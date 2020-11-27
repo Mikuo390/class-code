@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+double S(int x, int y, int z)
+{
+	return (x + y) * z / 2;
+}
+int main()
+{
+	double a,b,h, s;
+	printf("请输入梯形的上底下底高：>");
+	scanf("%lf%lf%lf", &a, &b, &h);
+	
+	s = S(a, b, h);
+
+	printf("梯形的面积为;>%lf", s);
+	return 0;
+}
