@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+int main()
+{
+	int m, n, x, y;
+	printf("请输入鸡和兔的数量和脚的数量");
+	scanf("%d%d", &m, &n);
+
+	x = (4 * m - n) / 2;//鸡
+	y = m - x;//兔
+	if (x * 2 + y * 4 == n)
+	{
+		printf("鸡有%d值，兔有%d只", x, y);
+	}
+	else
+		printf("no answer");
+
+	return 0;
+}
+
+
