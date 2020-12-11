@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include "stdio.h"
+#include "math.h"
+int main()
+{
+    int ri, repeat;
+    int a[6][6], flag = 1, i, j, n;//flag作为是否上三角矩阵的标志
+    scanf("%d",&repeat);
+    for(ri=1;ri<=repeat;ri++)
+    {
+        scanf("%d",&n);
+        for (i=0;i<n;i++)
+            for (j=0;j<n;j++)
+                scanf("%d",&a[i][j]); /*输入n*n个元素*/
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (i > j && a[i][j] != 0)
+                    flag = 0;
+            }
+        }
+
+
+        if (flag)  
+            printf("YES\n");
+        else  
+            printf("NO\n");
+    }
+}
