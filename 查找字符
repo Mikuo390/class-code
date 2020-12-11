@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include "stdio.h"
+#define MAXLEN 80
+int main(void)
+{
+    char cc, ch;
+    char str[MAXLEN];
+    int count, flag, i, index;/*count变量选用*/
+    int repeat, ri;
+
+    scanf("%d", &repeat);
+    getchar();
+    for (ri = 1; ri <= repeat; ri++) 
+    {
+        cc = getchar();/*输入待查找字符*/
+        getchar();/*接收回车键*/
+        flag = 0;/*是否找到字符标志*/
+        i = 0;
+        index = 0;/*待查找字符初始位置*/
+        while ((ch = getchar()) != '\n') 
+        {
+            str[i++] = ch; /*输入字符串存入str数组*/
+        }
+        str[i] = '\0';/* 字符串以’\0’结束*/
+
+        for (i = 0; str[i] != '\0'; i++)
+            if (cc == str[i]) 
+            {
+                index = i; 
+                flag = 1;
+            }
+
+        if (flag != 0)
+            printf("index = %d\n", index);
+        else
+            printf("Not Found\n");
+    }
+}
