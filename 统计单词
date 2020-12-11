@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#define MAX 100
+int main()
+{
+	char str[MAX];
+	char a;
+	int i, count = 0, flag = 0;//flag表示新单词
+
+	gets(str);
+	for (i = 0; (a = str[i]) != '\0'; i++)
+	{
+		if (a == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			count++;
+		}
+	}
+	printf("count=%d\n", count);
+	return 0;
+}
