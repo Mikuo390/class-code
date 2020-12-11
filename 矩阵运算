@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include "stdio.h"
+int main()
+{
+    int ri, repeat;
+    int a[6][6], i, j, n, sum = 0;
+    scanf("%d", &repeat);
+    for (ri = 1; ri <= repeat; ri++) {
+        scanf("%d", &n);
+        for (i = 0; i < n; i++)
+            for (j = 0; j < n; j++)
+                scanf("%d", &a[i][j]); /*输入n*n个元素*/
+
+        sum = 0;
+        for (i = 0; i < n; i++)
+        {
+            for (j = 0; j < n; j++)
+            {
+                if (i != n - 1 && j != n - 1 && i + j != n - 1)
+                    sum += a[i][j];
+            }
+        }
+
+
+        printf("sum=%d\n", sum);/*输出和*/
+    }
+}
