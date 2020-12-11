@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#define MAX 100
+int main()
+{
+	int arr[MAX];
+	int num;
+	int E = 0, D = 0, C = 0, B = 0, A = 0, ERRO = 0;
+	printf("请输入成绩的总数:>");
+	scanf("%d", &num);
+	printf("请输入成绩:>");
+
+	int i = 0;
+	int mark;
+	for (i = 0; i < num; i++)
+	{
+		scanf("%d", &mark);
+		arr[i] = mark;
+	}
+
+	int j = 0;
+	for (j = 0; j < num; j++)
+	{
+		if (arr[j] < 60 && arr[j] >= 0)
+			E++;
+		else if (arr[j] < 70 && arr[j] >= 60)
+			D++;
+		else if (arr[j] < 80 && arr[j] >= 70)
+			C++;
+		else if (arr[j] < 90 && arr[j] >= 80)
+			B++;
+		else if (arr[j] <= 100 && arr[j] >= 90)
+			A++;
+		else
+			ERRO++;
+	}
+	printf("100-90 %d个,89-80 %d个,79-70 %d个,69-60 %d个,59-0 %d个,无效成绩 %d个", A, B, C, D, E, ERRO);
+	return 0;
+}
