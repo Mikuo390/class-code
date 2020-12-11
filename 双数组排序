@@ -1,0 +1,32 @@
+#include<stdio.h>
+void sort(int arr1[5], int arr2[5], int arr3[10], int n, int m)
+{
+    int i, j, temp;
+    for (i = 0; i < n; i++)
+        arr3[i] = arr1[i];
+    for (i = 0; i < m; i++)
+        arr3[n + i] = arr2[i];
+
+    for (i = 0; i < m + n - 1; i++)
+    {
+        for (j = i + 1; j < m + n; j++)
+        {
+            if (arr3[i] > arr3[j])
+            {
+                temp = arr3[i];
+                arr3[i] = arr3[j];
+                arr3[j] = temp;
+            }
+        }
+    }
+}
+int main()
+{
+    int arr1[] = { 1,3,5,7,9 };
+    int arr2[] = { 2,4,6,8,0 };
+    int arr3[10];
+    sort(arr1, arr2, arr3, 5, 5);
+    for (int i = 0; i < 10; i++)
+        printf("%d ", arr3[i]);
+    printf("\n");
+}
