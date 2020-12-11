@@ -1,0 +1,41 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#include<string.h>
+void bubble_sort(int arr[], int n)
+{
+	int i = 0;//确定冒泡排序的趟数
+	for (i = 0; i < n - 1; i++)
+	{
+		int j = 0;//每一趟冒泡排序的内容
+		for (j = 0; j < n - 1 - i; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				int tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
+		}
+	}
+}
+int main()
+{
+	int arr[100];
+	int n = 0;
+	int i = 0;
+	int j = 0;
+	printf("请输入一个整数n:>");
+	scanf("%d\n", &n);
+	memset(arr, n, sizeof(arr));
+
+	for (j = 0; j < n; j++)
+		scanf("%d", &arr[j]);
+
+	bubble_sort(arr, n);
+	
+	for (i = 0; i < n; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
