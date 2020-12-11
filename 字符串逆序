@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h> 
+int main(void)
+{
+    int i, j, temp;
+    char str[80];
+
+    i = 0;
+    while ((str[i] = getchar()) != '\n')
+        i++;
+    str[i] = '\0';/*输入一个字符串以’\0’结束*/
+
+    int left = 0;
+    int right = i - 1;
+    while (left < right)
+    {
+        temp = str[left];
+        str[left] = str[right];
+        str[right] = temp;
+        left++;
+        right--;
+    }
+    printf("%s", str);
+
+}
