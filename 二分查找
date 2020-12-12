@@ -1,0 +1,67 @@
+#define _CRT_SECURE_NO_WARNINGS
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+//	int mid, high, low, x;
+//
+//	printf("请输入待查找的元素:>");
+//	scanf("%d", &x);
+//
+//	low = 0;
+//	high = 9;
+//
+//	while (low<high)
+//	{
+//		mid = (low + high) / 2;
+//		if (arr[mid] == x)
+//		{
+//			printf("%d的位置是%d\n", x, mid);
+//			break;
+//		}
+//		if (arr[mid] < x)
+//			low = mid + 1;
+//		else
+//			high = mid - 1;
+//
+//	}
+//	if (low > high)
+//		printf("%d不存在", x);
+//	return 0;
+//}
+
+#include<stdio.h>
+int main()
+{
+	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	int mid, high, low, x;
+
+	printf("请输入待查找的元素:>");
+	scanf("%d", &x);
+
+	low = 0;
+	high = 9;
+	while (low<high)
+	{
+		mid = (low + high) / 2;
+		if (arr[mid] == x)
+		{
+			printf("%d的位置是%d\n", x, mid);
+			break;
+		}
+		if (arr[mid] < x)
+		{
+			low = mid + 1;
+		}
+		else
+		{
+			high = mid - 1;
+		}
+	}
+	if (low > high)
+		printf("%d不存在",x);
+
+	return 0;
+
+}
