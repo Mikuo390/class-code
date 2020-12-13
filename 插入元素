@@ -1,0 +1,81 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[11] = { 170,131,6,48,34,30,7,135,60,18 };
+//	int i=0, j, k, p, t, x;
+//	for (i = 0; i < 10; i++)
+//	{
+//		p = i;
+//		for (j = i + 1; j < 10; j++)
+//		{
+//			if (arr[j] < arr[p])
+//				p = j;
+//		}
+//
+//		if (p != i)
+//		{
+//			t = arr[i];
+//			arr[i] = arr[p];
+//			arr[p] = t;
+//		}
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\ninput number:\n");
+//	scanf("%d", &x);
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (x < arr[i])
+//		{
+//			for (k = 9; k >= i; k--)
+//				arr[k + 1] = arr[k];
+//			break;
+//		}
+//	}
+//	arr[i] = x;
+//	for (i = 0; i <= 10; i++)
+//		printf("%d ", arr[i]);
+//	printf("\n");
+//}
+
+#include<stdio.h>
+int main()
+{
+	int arr[11] = { 170,131,6,48,34,30,7,135,60,18 };
+	int i = 0, j, k, p, temp, x;
+	for (i = 0; i < 11-1; i++)
+	{
+		j = 0;
+		for (j = 0; j < 11 - i - 1;j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+	for(i=0;i<10;i++)
+		printf("%d ", arr[i]);
+
+	printf("\n请输入要插入的值\n");
+	scanf("%d", &x);
+	for (i = 0; i < 11 - 1; i++)
+	{
+		if (x = arr[i])
+		{
+			for (k = 9; k >= i; k--)
+				arr[k + 1] = arr[k];
+			break;
+		}
+	}
+	arr[i] = x;
+	for (i = 0; i <= 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+
+
