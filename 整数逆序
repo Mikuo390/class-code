@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+int main()
+{
+    int ri, repeat;
+    long in, res;
+    long reverse(long number);
+
+    scanf("%d", &repeat);
+    for (ri = 1; ri <= repeat; ri++) 
+    {
+        scanf("%ld", &in);   
+		  res = reverse(in);
+        printf("%ld\n", res);
+    }
+}
+long reverse(long number) 
+{	
+	int ret = 0;
+	while (number) 
+	{
+        ret = ret * 10 + number % 10;
+        number /= 10;
+	}
+    return ret;
+}
